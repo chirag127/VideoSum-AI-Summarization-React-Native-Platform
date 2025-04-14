@@ -230,17 +230,6 @@ This document outlines the requirements for a cross-platform (iOS, Android, Web 
 *   Average summary generation time.
 *   Error rate (API errors, validation failures).
 
-**11. Open Issues/Questions**
-
-*   Confirm the exact availability and naming of the `Gemini 2.0 Flash-Lite` model via API access. Adjust if necessary.
-*   Finalize the specific range and steps for TTS Speed/Pitch controls based on technical feasibility and user testing. (Target 16x speed needs validation).
-*   Decision on whether editing a summary replaces the existing entry or creates a new one linked to the same video. (Recommendation: Replace).
-
----
-**11. Open Issues / Questions**
-
-*   (None currently - This PRD assumes all initial questions are resolved by the requirements above).
-
 ---
 the following is the example code for the backend API endpoint to generate summaries using the Gemini 2.0 Flash-Lite model:
 
