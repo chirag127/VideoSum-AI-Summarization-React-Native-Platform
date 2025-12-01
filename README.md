@@ -1,230 +1,100 @@
-# VideoSum: AI-Powered Video Summarization - Mobile Platform
+<div align="center">
+  <img src="https://raw.githubusercontent.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/main/docs/logo.png" alt="VideoSum Logo" width="180"/>
+  <h1>VideoSum-AI-Powered-Video-Summarization-Mobile-Platform</h1>
+  <p>The definitive cross-platform mobile app (React Native/Expo) for AI-powered video summarization. Quickly distill lengthy video content into concise, actionable insights, boosting productivity and learning speed for professionals and students on iOS and Android.</p>
 
-[![Build Status](https://img.shields.io/github/actions/workflow/user/your-username/your-repo/main.yml?style=flat-square&logo=githubactions)](https://github.com/your-username/your-repo/actions)
-[![Code Coverage](https://img.shields.io/codecov/c/github/your-username/your-repo?style=flat-square&logo=codecov)](https://codecov.io/gh/your-username/your-repo)
-[![TypeScript Version](https://img.shields.io/badge/TypeScript-6.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![React Native Version](https://img.shields.io/badge/React%20Native-Latest-informational?style=flat-square&logo=react)](https://reactnative.dev/)
-[![Expo Version](https://img.shields.io/badge/Expo-Latest-informational?style=flat-square&logo=expo)](https://expo.dev/)
-[![License](https://img.shields.io/github/license/your-username/your-repo?style=flat-square)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/your-username/your-repo?style=flat-square)](https://github.com/your-username/your-repo/commits/main)
+  <p>
+    <a href="https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/actions/workflows/ci.yml">
+      <img src="https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/actions/workflows/ci.yml/badge.svg" alt="Build Status" style="flat-square">
+    </a>
+    <a href="https://codecov.io/gh/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform">
+      <img src="https://img.shields.io/codecov/c/github/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform?style=flat-square&token=YOUR_CODECOV_TOKEN_HERE" alt="Code Coverage">
+    </a>
+    <img src="https://img.shields.io/badge/Tech%20Stack-TypeScript%20%7C%20React%20Native%20%7C%20Expo%20%7C%20AI-blue?style=flat-square" alt="Tech Stack">
+    <img src="https://img.shields.io/badge/Lint%2FFormat-Biome-blueviolet?style=flat-square" alt="Lint/Format">
+    <a href="https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=flat-square" alt="License">
+    </a>
+    <img src="https://img.shields.io/github/stars/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform?style=flat-square" alt="GitHub Stars">
+  </p>
 
+  <a href="https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/stargazers">
+    <img src="https://img.shields.io/badge/Star%20⭐%20this%20Repo-lightgrey?style=social&logo=github" alt="Star this repo">
+  </a>
+</div>
 
-**VideoSum** is an AI-powered, cross-platform mobile platform engineered with React Native and Expo. It empowers users on iOS and Android to effortlessly transform lengthy video content into concise, actionable summaries, enabling rapid insight extraction and significant productivity enhancement.
+## 🚀 Overview
 
-Leverage cutting-edge machine learning to distill complex video information, making content consumption efficient and intelligent. This platform is designed for scalability, robust performance, and a seamless user experience, making it an indispensable tool for students, professionals, and content consumers alike.
+VideoSum is a cutting-edge cross-platform mobile application engineered to revolutionize how users consume video content. Leveraging advanced AI, it meticulously distills extensive video material into concise, actionable summaries, thereby enhancing user productivity and learning efficiency across both iOS and Android platforms.
 
-**Star ⭐ this Repo if you find it valuable!**
+## 🌟 Features
 
----
+*   **AI-Powered Summarization:** Utilizes state-of-the-art machine learning models to identify and extract key information from video content.
+*   **Cross-Platform Compatibility:** Developed with React Native and Expo for seamless performance on iOS and Android devices.
+*   **Intuitive User Interface:** A clean, modern, and responsive design for an optimal user experience.
+*   **Multiple Input Sources:** Support for various video input methods (e.g., direct upload, YouTube links).
+*   **Customizable Summary Length:** Tailor summaries to your specific needs, from quick overviews to detailed insights.
+*   **Offline Access:** Access previously summarized content without an internet connection.
+*   **Secure & Private:** Prioritizes user data privacy and security with robust encryption standards.
 
-## Table of Contents
+## 🏗️ Architecture: Feature-Sliced Design (FSD)
 
-* [🚀 Introduction](#introduction)
-* [✨ Features](#features)
-* [🛠️ Architecture](#architecture)
-* [📦 Tech Stack](#tech-stack)
-* [🚀 Getting Started](#getting-started)
-* [⚙️ Development](#development)
-* [🧪 Testing](#testing)
-* [🔒 Security](#security)
-* [📜 Contributing](#contributing)
-* [📄 License](#license)
-* [🤖 AI Agent Directives](#ai-agent-directives)
+VideoSum adheres to the **Feature-Sliced Design (FSD)** methodology, providing a clear, scalable, and maintainable project structure. This modular approach ensures strict layer independence and promotes efficient feature development and team collaboration.
 
----
-
-## 🚀 Introduction
-
-VideoSum revolutionizes video content consumption by providing AI-driven, concise summaries. Users can upload or link to videos and receive immediate, digestible insights, saving time and improving comprehension across educational, professional, and personal content.
-
----
-
-## ✨ Features
-
-*   **AI-Powered Summarization:** Utilizes advanced AI models to generate accurate and context-aware video summaries.
-*   **Cross-Platform Compatibility:** Native iOS and Android support via React Native and Expo.
-*   **Intuitive User Interface:** Clean, modern design optimized for mobile usability.
-*   **Scalable Architecture:** Built for performance and future growth.
-*   **Content Versatility:** Supports various video sources and formats.
-*   **Productivity Enhancement:** Enables rapid understanding of complex video material.
-
----
-
-## 🛠️ Architecture
-
-```mermaid
+mermaid
 graph TD
-    A[User Device (iOS/Android)] --> B(React Native App);
-    B --> C(Expo Go/Development Client);
-    C --> D{API Gateway/Backend Service};
-    D --> E(AI Summarization Engine);
-    E --> F(Video Processing Module);
-    F --> G(Storage - Summaries/Metadata);
-    D --> H(Database);
+    A[App] --> B(Processes & AI Models)
+    B --> C(Features)
+    C --> D(Entities)
+    D --> E(Shared UI & Services)
 
-    subgraph Frontend
-        B
-        C
+    subgraph Layers
+        direction TB
+        A --- App
+        B --- Processes
+        C --- Features
+        D --- Entities
+        E --- Shared
     end
 
-    subgraph Backend
-        D
-        E
-        F
-        G
-        H
-    end
+    App --> Feature1(Feature: Video Upload)
+    App --> Feature2(Feature: Summarization View)
+    App --> Feature3(Feature: User Profile)
 
-    classDef frontend fill:#c9daf8,stroke:#333,stroke-width:2px;
-    classDef backend fill:#d9ead3,stroke:#333,stroke-width:2px;
-    class B,C frontend;
-    class D,E,F,G,H backend;
-```
+    Feature1 --> ProcessVideo(Process: Video Processing)
+    Feature2 --> ProcessSummary(Process: Summary Generation)
 
----
+    ProcessVideo --> AI_Model_1(AI Model: Speech-to-Text)
+    ProcessVideo --> AI_Model_2(AI Model: Keyframe Extraction)
+    ProcessSummary --> AI_Model_3(AI Model: Text Summarization)
 
-## 📦 Tech Stack
+    Feature1 --> EntityVideo(Entity: Video Object)
+    Feature2 --> EntitySummary(Entity: Summary Object)
+    Feature3 --> EntityUser(Entity: User Object)
 
-*   **Core Framework:** React Native
-*   **Development Platform:** Expo
-*   **Language:** TypeScript 6.x
-*   **Bundler/Build:** Vite 7.x
-*   **State Management:** Signals
-*   **UI Styling:** Tailwind CSS v4 (with NativeWind)
-*   **Linting/Formatting:** Biome
-*   **Testing:** Vitest (Unit), Playwright (E2E)
-*   **Backend:** Node.js / Python (TBD - specific services)
-*   **AI Models:** Leveraging external APIs (e.g., OpenAI, Gemini Pro) or custom models.
-*   **Cloud Services:** AWS/GCP/Azure (for backend, storage, AI inference)
+    EntityVideo --> SharedUI(Shared: UI Components)
+    EntityVideo --> SharedUtils(Shared: Utility Functions)
+    EntityVideo --> SharedServices(Shared: API Services)
 
----
 
-## 🚀 Getting Started
+## 📋 Table of Contents
 
-### Prerequisites
-
-*   Node.js (v18+ recommended)
-*   npm or Yarn
-*   Expo Go app on your mobile device OR
-*   React Native development environment set up
-
-### Installation
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
-    ```
-
-2.  **Install Dependencies:**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-
-### Running the App
-
-*   **Development Build:**
-    ```bash
-    npm run dev
-    # or
-    yarn dev
-    ```
-    This will start the development server and provide a QR code to scan with the Expo Go app on your phone.
-
-*   **Building for Production:**
-    (Specific commands will be added in CI/CD workflows and `package.json` scripts).
-
----
-
-## ⚙️ Development
-
-### Project Structure
-
-This project adheres to a Feature-Sliced Design (FSD) approach for modularity and maintainability:
-
-```
-. 
-├── src/
-│   ├── app/             # Application-level setup, routing, global providers
-│   ├── assets/          # Static assets (images, fonts, etc.)
-│   ├── components/      # UI components shared across features
-│   ├── entities/        # Core business entities (e.g., User, Video)
-│   ├── features/
-│   │   ├── video-upload/
-│   │   ├── summarization/
-│   │   └── .../
-│   ├── pages/           # Page-level components (screens)
-│   ├── processes/       # Cross-cutting concerns, orchestrations
-│   ├── shared/
-│   │   ├── api/
-│   │   ├── lib/
-│   │   ├── ui/
-│   │   └── .../
-│   └── main.tsx         # App entry point
-├── tests/
-├── .gitignore
-├── biome.json
-├── tsconfig.json
-├── package.json
-└── vite.config.ts
-```
-
-### Scripts
-
-| Script        | Description                                      |
-| :------------ | :----------------------------------------------- |
-| `dev`         | Starts the development server.                   |
-| `build`       | Builds the application for production.           |
-| `lint`        | Runs Biome to check and format code.             |
-| `lint:fix`    | Runs Biome to automatically fix linting issues.  |
-| `test`        | Runs Vitest unit tests.                          |
-| `test:e2e`    | Runs Playwright end-to-end tests.                |
-
-### Principles
-
-*   **SOLID:** Adhering to the Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion principles.
-*   **DRY (Don't Repeat Yourself):** Automating repetitive tasks and abstracting common logic.
-*   **KISS (Keep It Simple, Stupid):** Prioritizing clear, straightforward solutions.
-*   **YAGNI (You Ain't Gonna Need It):** Avoiding premature optimization or feature creep.
-*   **CQS:** Ensuring methods are either commands (side-effects) or queries (data retrieval), not both.
-
----
-
-## 🧪 Testing
-
-*   **Unit Tests:** Located in `tests/unit/` and mirrored with source code structure. Run with `npm run test`.
-*   **End-to-End (E2E) Tests:** Located in `tests/e2e/`. Run with `npm run test:e2e`.
-*   **Coverage:** Aiming for 100% coverage on critical modules. Tools: Vitest, Playwright.
-
----
-
-## 🔒 Security
-
-*   **Input Validation:** All user inputs and API payloads are rigorously validated.
-*   **Dependency Auditing:** Regular checks for vulnerabilities using `npm audit` and automated tools.
-*   **Secure API Practices:** Implementing secure authentication, authorization, and data encryption (HTTPS, JWT, etc.).
-*   **Secrets Management:** Never commit secrets directly; use environment variables or secure secret management solutions.
-
----
-
-## 📜 Contributing
-
-Contributions are welcome! Please follow the guidelines in the [CONTRIBUTING.md](.github/CONTRIBUTING.md) file.
-
----
-
-## 📄 License
-
-This project is licensed under the CC BY-NC license. See the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤖 AI Agent Directives
+*   [🚀 Overview](#-overview)
+*   [🌟 Features](#-features)
+*   [🏗️ Architecture: Feature-Sliced Design (FSD)](#%EF%B8%8F-architecture-feature-sliced-design-fsd)
+*   [🤖 AI Agent Directives](#-ai-agent-directives)
+*   [🛠️ Development Setup](#%EF%B8%8F-development-setup)
+    *   [Prerequisites](#prerequisites)
+    *   [Installation](#installation)
+    *   [Running the Application](#running-the-application)
+*   [⚙️ Available Scripts](#%E2%9A%99%EF%B8%8F-available-scripts)
+*   [🚀 Deployment](#-deployment)
+*   [🤝 Contributing](#-contributing)
+*   [📄 License](#-license)
+*   [🛡️ Security](#%EF%B8%8F-security)
 
 <details>
-<summary>View AI Agent Directives</summary>
+<summary><h2>🤖 AI Agent Directives</h2></summary>
 
 # SYSTEM: APEX TECHNICAL AUTHORITY & ELITE ARCHITECT (DECEMBER 2025 EDITION)
 
@@ -236,157 +106,166 @@ This project is licensed under the CC BY-NC license. See the [LICENSE](LICENSE) 
 
 ---
 
-## 2. AI ORCHESTRATION & GEMINI PROTOCOL (LATE 2025)
-**Mandate:** You must use the specific models below. Strictly follow this **Fallback Cascade**. Always try the smartest model first.
-*   **Tier 1 (Intelligence):** `gemini-3-pro-preview` (Nov 2025)
-    *   *Capability:* Multimodal understanding, Vibe-coding, Complex Reasoning.
-    *   *Context:* 1M Input / 65k Output.
-*   **Tier 2 (Reasoning/STEM):** `gemini-2.5-pro` (Stable)
-    *   *Capability:* Advanced thinking, Codebases, Math.
-    *   *Context:* 1M Input / 65k Output.
-*   **Tier 3 (Balanced Speed):** `gemini-2.5-flash` (Stable)
-    *   *Capability:* Large scale processing, Agentic use cases.
-    *   *Context:* 1M Input / 65k Output.
-*   **Tier 4 (Ultra-Fast/Cost):** `gemini-2.5-flash-native-preview-09-2025`
-    *   *Capability:* High throughput, Cost-efficiency.
-    *   *Context:* 1M Input / 65k Output.
-*   **Tier 5 (Legacy/Specialized):**
-    *   `gemini-2.0-flash` (Workhorse fallback).
-    *   `gemini-2.5-flash-native-audio-preview-09-2025` (Audio I/O).
-*   **Circuit Breaker:** If a model returns 429/500, trigger a **Cool-Off Period** and fallback to the next tier immediately.
-*   **Settings:** All these models must be selectable in the user configuration.
+## 2. INPUT PROCESSING & COGNITION
+*   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
+    *   **Context:** User inputs may contain phonetic errors (homophones, typos).
+    *   **Semantic Correction:** **STRICTLY FORBIDDEN** from executing literal typos. You must **INFER** technical intent based on the project context.
+    *   **Logic Anchor:** Treat the `README.md` as the **Single Source of Truth (SSOT)**.
+*   **MANDATORY MCP INSTRUMENTATION:**
+    *   **No Guessing:** Do not hallucinate APIs.
+    *   **Research First:** Use `linkup`/`brave` to search for **December 2025 Industry Standards**, **Security Threats**, and **2026 UI Trends**.
+    *   **Validation:** Use `docfork` to verify *every* external API signature.
+    *   **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
 
 ---
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** Detect the project type (`package.json`, `Cargo.toml`, `pyproject.toml`) and apply the corresponding **Apex Toolchain**.
-*   **SCENARIO A: WEB / APP / EXTENSION (TypeScript)**
-    *   **Stack:** **TypeScript 6.x** (Strict), **Vite 7** (Rolldown), **Tauri v2.x** (Native), **WXT** (Extensions).
-    *   **State:** **Signals** (Standardized).
-    *   **Lint/Test:** **Biome** (Speed) + **Vitest** (Unit) + **Playwright** (E2E).
-*   **SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go)**
-    *   **Stack:** **Rust 1.8x** (Cargo) or **Go 1.2x**.
-    *   **Lint:** **Clippy** / **GolangCI-Lint**.
-*   **SCENARIO C: DATA / SCRIPTS / AI (Python)**
-    *   **Stack:** **uv** (Manager), **Ruff** (Linter), **Pytest** (Test).
+**Directives:** This project, `VideoSum-AI-Powered-Video-Summarization-Mobile-Platform`, is a React Native/Expo mobile application with AI integration.
+
+*   **PRIMARY SCENARIO: MOBILE / APP (TypeScript / React Native)**
+    *   **Stack:** This project leverages **TypeScript 5.x+**, **React Native 0.73+**, and **Expo SDK 50+** for cross-platform mobile development. Key tools include **npm/yarn/pnpm** (for package management), **Biome** (for ultra-fast linting and formatting), and **Vitest** (for robust unit and integration testing).
+    *   **Architecture:** Adheres to the **Feature-Sliced Design (FSD)** pattern, ensuring clear separation of concerns for features like video upload, AI processing orchestration, summarization display, and user authentication, while maintaining a unified mobile experience.
+    *   **AI Integration:** Deeply integrated with **Google Gemini API** (`gemini-3-pro` by default) for intelligent video transcription, keyphrase extraction, and text summarization. Prioritize modular design, clear API contracts, and robust error handling for all AI model interactions.
+    *   **State Management:** Utilizes **React Context API** and/or lightweight libraries like **Zustand** or **Jotai** for efficient state management.
+    *   **Styling:** Employs **TailwindCSS for React Native** (Nativewind) or a similar utility-first CSS-in-JS solution for rapid and consistent UI development.
+
+*   **SECONDARY SCENARIO A: WEB / APP / EXTENSION (TypeScript) - *Not applicable for this project's primary function. Reference only for potential future web-based extensions or admin panels.***
+    *   **Stack:** TypeScript 6.x (Strict), Vite 7 (Rolldown), Tauri v2.x (Native), WXT (Extensions).
+    *   **State:** Signals (Standardized).
+    *   **Lint/Test:** Biome (Speed) + Vitest (Unit) + Playwright (E2E).
+    *   **Architecture:** Feature-Sliced Design (FSD).
+
+*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not applicable for this project. Reference only.***
+    *   **Stack:** Rust (Cargo) or Go (Modules).
+    *   **Lint:** Clippy / GolangCI-Lint.
+    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
 
 ---
 
-## 4. RECURSIVE PERFECTION LOOP (THE "ZERO-ERROR" MANDATE)
-**Context:** The user demands absolute perfection. You must not stop until the codebase is pristine.
-**The Loop:**
-1.  **Analyze:** Scan the codebase.
-2.  **Fix:** Apply architectural patterns and fixes.
-3.  **Lint/Format:** Run `biome check --apply` / `ruff check --fix`.
-4.  **Test:** Run `vitest` / `pytest`.
-5.  **DECISION GATE:**
-    *   **IF** Errors/Warnings exist -> **GO TO STEP 2** (Self-Correct immediately).
-    *   **IF** Clean -> **COMMIT** and Present.
-**Constraint:** **DO NOT STOP** until the build is perfectly clean.
+## 4. ARCHITECTURAL PATTERNS & PRINCIPLES
+*   **Feature-Sliced Design (FSD):** The primary architectural pattern, emphasizing strict layering and domain-driven module organization. Each "slice" (app, processes, features, entities, shared) has explicit dependencies, enforcing unidirectional data flow.
+*   **SOLID Principles:** Adherence to Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+*   **DRY (Don't Repeat Yourself):** Promote reusable components, hooks, and utility functions.
+*   **YAGNI (You Aren't Gonna Need It):** Avoid premature optimization and over-engineering. Build only what is required.
+*   **Clean Code Principles:** Focus on readability, maintainability, and testability.
 
 ---
 
-## 5. CORE ARCHITECTURAL PRINCIPLES
-*   **SOLID MANDATE:** SRP, OCP, LSP, ISP, DIP.
-*   **MODULARITY:** Feature-First Structure (`features/auth`), not type.
-*   **CQS:** Methods must be **Commands** (Action) or **Queries** (Data), never both.
-*   **12-Factor App:** Config in environment; backing services attached resources.
+## 5. DEVELOPMENT WORKFLOW & STANDARDS
+*   **Testing Strategy:**
+    *   **Unit Tests:** Vitest for individual components, hooks, and utility functions. Aim for >90% code coverage.
+    *   **Integration Tests:** Vitest for testing interactions between modules within a feature.
+    *   **End-to-End (E2E) Tests:** Detox or Maestro for testing full user flows on actual devices/simulators.
+*   **Linting & Formatting:** **Biome** is mandatory for all TypeScript/JavaScript files. Pre-commit hooks via `lint-staged` and `husky` ensure code quality.
+*   **CI/CD:** Automated workflows via GitHub Actions for linting, testing, building, and deploying to Expo Application Services (EAS).
+*   **Semantic Versioning:** Follow `MAJOR.MINOR.PATCH` for all releases.
+*   **Conventional Commits:** Enforce conventional commit messages for clear history and automated changelog generation.
 
 ---
 
-## 6. CODE HYGIENE & STANDARDS (READABILITY FIRST)
-*   **SEMANTIC NAMING PROTOCOL:**
-    *   **Descriptive Verbs:** `calculateWeeklyPay` (Good) vs `calc` (Bad).
-    *   **Casing:** `camelCase` (JS/TS), `snake_case` (Python), `PascalCase` (Classes).
-*   **CLEAN CODE RULES:**
-    *   **Verticality:** Optimize for reading down.
-    *   **No Nesting:** Use **Guard Clauses** (`return early`).
-    *   **DRY & KISS:** Automate repetitive tasks. Keep logic simple.
-    *   **Zero Comments:** Code must be **Self-Documenting**. Use comments *only* for "Why".
-
----
-
-## 7. RELIABILITY, SECURITY & SUSTAINABILITY
-*   **DEVSECOPS PROTOCOL:**
-    *   **Zero Trust:** Sanitize **ALL** inputs (OWASP Top 10 2025).
-    *   **Supply Chain:** Generate **SBOMs** for all builds.
-    *   **Fail Fast:** Throw errors immediately on invalid state.
-    *   **Encryption:** Secure sensitive data at rest and in transit.
-*   **EXCEPTION HANDLING:**
-    *   **Resilience:** App must **NEVER** crash. Wrap critical I/O in `try-catch-finally`.
-    *   **Recovery:** Implement retry logic with exponential backoff.
-*   **GREEN SOFTWARE:**
-    *   **Rule of Least Power:** Choose the lightest tool for the job.
-    *   **Efficiency:** Optimize loops ($O(n)$ over $O(n^2)$).
-    *   **Lazy Loading:** Load resources only when needed.
-
----
-
-## 8. COMPREHENSIVE TESTING STRATEGY
-*   **FOLDER SEPARATION PROTOCOL:**
-    *   **Production Purity:** Source folder is for code ONLY.
-    *   **Mirror Structure:** Tests reside exclusively in `tests/`.
-*   **TESTING PYRAMID (F.I.R.S.T.):**
-    *   **Fast:** Tests run in milliseconds.
-    *   **Isolated:** No external dependencies (Mock DB/Network).
-    *   **Repeatable:** Deterministic results.
-*   **COVERAGE MANDATE:**
-    *   **1:1 Mapping:** Every source file **MUST** have a corresponding test file.
-    *   **Scenario Coverage:** Test **Success**, **Failure**, and **Edge Cases**.
-    *   **Zero-Error Standard:** Software must run with 0 console errors.
-
----
-
-## 9. UI/UX AESTHETIC SINGULARITY (2026 STANDARD)
-*   **VISUAL LANGUAGE:**
-    *   **Style:** Blend **Liquid Glass** + **Neo-Brutalist** + **Material You 3.0**.
-    *   **Motion:** **MANDATORY** fluid animations (`transition: all 0.2s`).
-*   **PERFORMANCE UX:**
-    *   **INP Optimization:** Interaction to Next Paint < 200ms.
-    *   **Optimistic UI:** UI updates instantly; server syncs in background.
-*   **INTERACTION DESIGN:**
-    *   **Hyper-Personalization:** Adapt layouts based on user behavior.
-    *   **Micro-interactions:** Every click/hover must have feedback.
-*   **HYPER-CONFIGURABILITY:**
-    *   **Mandate:** Every feature/color must be user-configurable via Settings.
-
----
-
-## 10. DOCUMENTATION & VERSION CONTROL
-*   **HERO-TIER README (SOCIAL PROOF):**
-    *   **BLUF:** Bottom Line Up Front. Value prop first.
-    *   **Live Sync:** Update README **IN THE SAME TURN** as code changes.
-    *   **Visuals:** High-Res Badges (Shields.io), ASCII Architecture Trees.
-    *   **AI Replication Block:** Include `<details>` with stack info for other agents.
-    *   **Social Proof:** Explicitly ask users to **"Star ⭐ this Repo"**.
-*   **ADVANCED GIT OPERATIONS:**
-    *   **Context Archaeology:** Use `git log`/`git blame`.
-    *   **Conventional Commits:** Strict format (`feat:`, `fix:`, `docs:`).
-    *   **Semantic Versioning:** Enforce `Major.Minor.Patch`.
-
----
-
-## 11. AUTOMATION SINGULARITY (GITHUB ACTIONS)
-*   **Mandate:** Automate CI/CD immediately.
-*   **Workflows:** 
-    1.  **Integrity:** Lint + Test on Push.
-    2.  **Security:** Audit dependencies + SBOM.
-    3.  **Release:** Semantic Versioning + Artifact Upload.
-    4.  **Deps:** Auto-merge non-breaking updates.
-
----
-
-## 12. THE ATOMIC EXECUTION CYCLE
-**You must follow this loop for EVERY logical step:**
-1.  **Audit:** Scan state (`ls -R`) & History (`git log`).
-2.  **Research:** Query Best Practices & Trends.
-3.  **Plan:** Architect via `clear-thought-two`.
-4.  **Act:** Fix Code + Polish + Add Settings + Write Tests.
-5.  **Automate:** Create/Update CI/CD YAMLs.
-6.  **Docs:** Update `README.md` (Replication Ready).
-7.  **Verify:** Run Tests & Linters.
-8.  **REITERATE:** If *any* error/warning exists, fix it immediately.
-    **DO NOT STOP** until the build is perfectly clean.
-9.  **Commit:** `git commit` immediately (Only when clean).
+## 6. VERIFICATION COMMANDS (FOR AI AGENTS)
+*   **Install Dependencies:** `npm install` or `yarn install` or `pnpm install`
+*   **Run Linting:** `npm run lint`
+*   **Run Tests:** `npm run test`
+*   **Run Build (for production):** `npm run build` (or `eas build`)
+*   **Start Development Server:** `npm start`
+*   **Check TypeScript types:** `npm run type-check`
 
 </details>
+
+## 🛠️ Development Setup
+
+Follow these steps to get a development environment up and running for VideoSum.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+*   **Node.js**: `v18.x` or higher (LTS recommended)
+*   **npm** or **Yarn** or **pnpm**: Your preferred package manager.
+*   **Expo CLI**: Install globally using `npm install -g expo-cli`
+
+### Installation
+
+1.  **Clone the repository:**
+    bash
+    git clone https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform.git
+    cd VideoSum-AI-Powered-Video-Summarization-Mobile-Platform
+    
+
+2.  **Install dependencies:**
+    bash
+    # Using npm
+    npm install
+
+    # Or using Yarn
+    # yarn install
+
+    # Or using pnpm
+    # pnpm install
+    
+
+3.  **Configure Environment Variables:**
+    Create a `.env` file in the root directory based on `.env.example`.
+    
+    # Example .env content
+    EXPO_PUBLIC_GEMINI_API_KEY=YOUR_GOOGLE_GEMINI_API_KEY
+    # Add other necessary environment variables
+    
+    You will need a Google Gemini API key for AI functionalities.
+
+### Running the Application
+
+To start the development server:
+
+bash
+npm start
+# Or yarn start
+# Or pnpm start
+
+
+This will open the Expo Dev Tools in your browser. You can then:
+*   Scan the QR code with your physical device (iOS or Android) running the Expo Go app.
+*   Run on an iOS simulator (press `i`).
+*   Run on an Android emulator (press `a`).
+*   Run in a web browser (press `w` - useful for basic UI testing, but full functionality requires mobile).
+
+## ⚙️ Available Scripts
+
+In the project directory, you can run:
+
+| Script        | Description                                                                 |
+| :------------ | :-------------------------------------------------------------------------- |
+| `npm start`   | Starts the Expo development server.                                         |
+| `npm run android` | Runs the app on a connected Android device or emulator.                       |
+| `npm run ios`     | Runs the app on a connected iOS device or simulator.                          |
+| `npm run web`     | Runs the app in the browser.                                                |
+| `npm run test`    | Launches the Vitest test runner.                                            |
+| `npm run lint`    | Runs Biome to lint and format all `src` files.                              |
+| `npm run format`  | Formats code using Biome (fix linting issues automatically).                |
+| `npm run build`   | Builds the app for production using Expo Application Services (EAS).        |
+| `npm run type-check` | Checks TypeScript files for type errors.                                  |
+
+## 🚀 Deployment
+
+Deployment to app stores (Apple App Store, Google Play Store) is managed via **Expo Application Services (EAS)**.
+To build for production:
+
+bash
+eas build --platform ios
+eas build --platform android
+
+
+Ensure you have configured `eas.json` and are logged in to Expo CLI (`expo login`).
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [CONTRIBUTING.md](https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/blob/main/.github/CONTRIBUTING.md) for guidelines on how to submit pull requests, report bugs, and suggest features.
+
+## 📄 License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/blob/main/LICENSE) License.
+
+## 🛡️ Security
+
+For information on security vulnerabilities and how to report them, please refer to our [SECURITY.md](https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/blob/main/.github/SECURITY.md) file.
