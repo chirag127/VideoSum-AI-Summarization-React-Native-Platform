@@ -1,74 +1,68 @@
-# Security Policy for VideoSum-AI-Powered-Video-Summarization-Mobile-Platform
+# 🛡️ VideoSum-AI-Powered-Video-Summarization-Mobile-Platform Security Policy
 
-At **VideoSum**, we prioritize the security and integrity of our AI-powered video summarization platform. We are committed to protecting user data and ensuring the reliability of our services on both iOS and Android. This document outlines our security policy and provides guidelines for reporting vulnerabilities.
+At VideoSum, the security of our users' data and the integrity of our platform are paramount. We are committed to developing and maintaining a secure, privacy-respecting, and robust mobile application that leverages cutting-edge AI for video summarization. This document outlines our security policy and guidelines for reporting vulnerabilities.
 
-## 🛡️ Our Commitment to Security
+## Reporting a Vulnerability
 
-We adhere to the highest industry standards for secure software development, incorporating **DEVSECOPS PROTOCOL** principles from design to deployment. Our architecture follows a **Zero Trust** model, emphasizing strict access controls and continuous verification. Key aspects of our security commitment include:
+We genuinely appreciate the efforts of security researchers and the community in helping us maintain a secure platform. If you discover a security vulnerability within VideoSum, we urge you to report it to us immediately and responsibly.
 
-*   **OWASP Top 10 (2025):** Continuous assessment and mitigation of the most critical web application security risks.
-*   **Input Sanitization:** All user inputs are rigorously validated and sanitized to prevent injection attacks and other common vulnerabilities.
-*   **Least Privilege:** Systems and users operate with the minimum necessary permissions.
-*   **Data Encryption:** Sensitive data is encrypted both at rest and in transit using state-of-the-art cryptographic algorithms.
-*   **Supply Chain Security:** We actively manage and audit our third-party dependencies to minimize supply chain risks and generate **SBOMs** for all builds.
-*   **Proactive Monitoring:** Continuous security monitoring and incident response capabilities.
+### How to Report
 
-## 📝 Reporting a Vulnerability
+To report a security vulnerability, please send a detailed email to our dedicated security team:
 
-We genuinely appreciate the efforts of security researchers and the community in helping us maintain a secure platform. If you discover a security vulnerability, please report it to us immediately through our private disclosure channel. **Please do not disclose vulnerabilities publicly before we have had a chance to address them.**
+📧 **security@videosum.com**
 
-### How to Report:
+### What to Include in Your Report:
 
-1.  **Direct Email:** Send an email to `security@videosum.io` (placeholder - replace with actual email).
-2.  **GitHub Security Advisories:** If applicable, use GitHub's private vulnerability reporting feature.
+When submitting a vulnerability report, please provide as much detail as possible to help us quickly understand and remediate the issue:
 
-### Information to Include in Your Report:
+*   **Clear Description:** A concise explanation of the vulnerability.
+*   **Steps to Reproduce:** Detailed, step-by-step instructions on how to reproduce the vulnerability.
+*   **Affected Version(s):** The specific version(s) of VideoSum you tested.
+*   **Impact:** Describe the potential impact of the vulnerability (e.g., data breach, unauthorized access, denial of service).
+*   **Proof of Concept (Optional but Recommended):** Any code, screenshots, or videos demonstrating the vulnerability.
+*   **Your Contact Information:** (Optional) If you wish to be credited, please provide your name/handle.
 
-To help us quickly understand and resolve the issue, please include as much of the following information as possible:
+### Our Commitment to Responsible Disclosure:
 
-*   **Clear Description:** A concise summary of the vulnerability.
-*   **Steps to Reproduce:** Detailed steps to reliably reproduce the vulnerability.
-*   **Impact:** Describe the potential impact of the vulnerability (e.g., data breach, service disruption, unauthorized access).
-*   **Affected Versions:** The specific version(s) of VideoSum where the vulnerability was found.
-*   **System Information:** Your operating system, browser, and any relevant tools or software used during discovery.
-*   **Proof-of-Concept:** Any code, scripts, or screenshots that demonstrate the vulnerability (optional but highly recommended).
-*   **Proposed Fix:** (Optional) If you have a suggestion for a fix, please include it.
+Upon receiving your report, our security team will:
 
-### PGP Key (Optional):
+1.  **Acknowledge:** We will acknowledge receipt of your report within 2 business days.
+2.  **Investigate:** We will thoroughly investigate the reported vulnerability.
+3.  **Remediate:** We will work diligently to fix the vulnerability in a timely manner.
+4.  **Communicate:** We will keep you informed of our progress and resolution plan.
+5.  **Credit:** With your permission, we will publicly credit you in our release notes or security advisory for your responsible disclosure.
 
-For enhanced security and confidentiality, you may encrypt your vulnerability report using our PGP key (available upon request or published on our official website).
+We kindly request that you **do not disclose the vulnerability publicly** until we have had sufficient time to address it. Public disclosure without prior coordination can put our users at risk.
 
-## 🚀 Our Response Process
+## Security Best Practices for Contributors
 
-Upon receiving a vulnerability report, we commit to the following:
+All contributors to VideoSum are expected to adhere to the following security best practices:
 
-1.  **Acknowledgement:** We will acknowledge receipt of your report within **2 business days**.
-2.  **Assessment:** Our security team will investigate and validate the reported vulnerability.
-3.  **Severity Classification:** We will classify the vulnerability's severity based on industry standards (e.g., CVSS).
-4.  **Remediation:** We will develop and deploy a fix for validated vulnerabilities.
-5.  **Communication:** We will keep you informed of our progress and expected timelines for resolution.
+*   **Input Validation & Sanitization:** All user inputs must be rigorously validated and sanitized to prevent common attacks like XSS, SQL injection, and command injection.
+*   **Principle of Least Privilege:** Components and services should operate with the minimum necessary permissions to perform their function.
+*   **Secure Dependencies:** Regularly update third-party libraries and frameworks, and audit them for known vulnerabilities.
+*   **Secure Error Handling:** Avoid exposing sensitive system information in error messages. Implement robust `try-catch-finally` blocks to ensure application resilience.
+*   **Code Reviews:** All code changes should undergo thorough security-focused code reviews.
+*   **Data Protection:** Implement encryption for sensitive data at rest and in transit. Ensure compliance with data privacy regulations (e.g., GDPR, CCPA).
+*   **API Security:** Design and implement APIs with strong authentication, authorization, and rate-limiting mechanisms.
+*   **Mobile Security:** Adhere to OWASP Mobile Top 10 guidelines, ensure secure data storage on devices, and protect against reverse engineering attempts.
+*   **AI Model Security:** Validate inputs and outputs of AI models, protect against model inversion attacks, and ensure the integrity of the AI pipeline.
 
-### Response Time Targets:
+## PGP Key for Secure Communication (Optional)
 
-*   **Critical Vulnerabilities:** Initial patch/hotfix within **72 hours**, full remediation within **7 days**.
-*   **High Vulnerabilities:** Remediation within **14 days**.
-*   **Medium Vulnerabilities:** Remediation within **30 days**.
-*   **Low Vulnerabilities:** Remediation within **90 days** or during the next scheduled release cycle.
+For enhanced security when communicating sensitive information, you may encrypt your reports using our PGP key. Please request our current PGP public key by sending an initial, non-sensitive email to `security@videosum.com`.
 
-## ✅ Supported Versions
+## Supported Versions
 
-We provide security updates for the latest stable release of VideoSum and the previous major version. Users are strongly encouraged to keep their applications updated to the latest version to ensure they benefit from all security enhancements and bug fixes.
+We only provide security updates for the **latest stable major version** of VideoSum.
 
-*   **Current Stable Version:** `v1.0.0` (or latest production release)
-*   **Previous Major Version:** `v0.x.x` (if applicable)
+*   **Latest Stable Major Version:** `v1.x.x` (Please refer to the latest release for the exact version number).
 
-## 📢 Public Disclosure Policy
+If you find a vulnerability in an older, unsupported version, we encourage you to upgrade to the latest version and re-test. While we appreciate reports on older versions, our immediate focus will always be on the most current stable release.
 
-Once a vulnerability is resolved, we typically handle public disclosure as follows:
+## License
 
-*   **Coordinated Disclosure:** We aim for a coordinated disclosure process, working with the reporter to agree on a public disclosure timeline.
-*   **Release Notes:** Security fixes will be noted in our release notes.
-*   **CVE Assignment:** For significant vulnerabilities, we may request a CVE (Common Vulnerabilities and Exposures) identifier.
-*   **Acknowledgement:** We will publicly acknowledge the reporter for their valuable contribution, unless anonymity is explicitly requested.
+This project is licensed under the [CC BY-NC License](LICENSE).
 
-Thank you for helping us make VideoSum more secure for everyone!
+Thank you for helping us keep VideoSum secure!
