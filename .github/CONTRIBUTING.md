@@ -1,80 +1,111 @@
-# 🚀 Contributing to VideoSum-AI-Powered-Video-Summarization-Mobile-Platform
+# Contributing to VideoSum-AI-Powered-Video-Summarization-Mobile-Platform
 
-Welcome to the VideoSum project. We adhere to the **Apex Technical Authority** standards, demanding **Zero-Defect, High-Velocity, Future-Proof** contributions. By contributing, you agree to maintain FAANG-level code quality, rigorous testing, and strict adherence to our architectural principles (SOLID, DRY).
+## Welcome!
 
-This repository operates under a **Meritocracy of Code Quality**.
+Thank you for considering contributing to VideoSum-AI-Powered-Video-Summarization-Mobile-Platform! We appreciate your willingness to help improve our project. This guide outlines the best practices and procedures for making contributions.
 
----
+## Our Philosophy
 
-## 1. Foundational Prerequisites
+We adhere to the principles of **Zero-Defect, High-Velocity, Future-Proof** development. This means we strive for robust, well-tested code delivered efficiently, with an eye towards long-term maintainability and adaptability.
 
-Before cloning or submitting any work, ensure your environment meets these non-negotiable requirements:
+## Getting Started
 
-1.  **Node.js:** Version 20 LTS or higher.
-2.  **Git:** Version 2.35+.
-3.  **TypeScript:** Familiarity with strict mode programming.
-4.  **Development Environment:** Valid setup for React Native/Expo development (Xcode/Android Studio dependencies).
-5.  **Apex Toolchain:** Ensure you have access to `biome` and `vitest` environments.
+### 1. Fork the Repository
 
-## 2. Workflow: Feature Branching & Atomic Commits
+Start by forking the official repository:
 
-We enforce **Conventional Commits** to maintain a clean, semantic `git history` and automate versioning.
+`git clone https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform.git`
 
-### Branching Strategy
+### 2. Setup Development Environment
 
-All development must occur on dedicated feature/fix branches originating from `main`.
+This project uses React Native with Expo. Please ensure you have the necessary development tools installed:
 
-*   **Features:** `feat/short-descriptive-name`
-*   **Bug Fixes:** `fix/issue-number-brief-description`
-*   **Refactoring/Cleanup:** `refactor/area-of-change`
-*   **Documentation:** `docs/description`
+*   [Node.js](https://nodejs.org/)
+*   [npm](https://www.npmjs.com/)
+*   [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
-### Commit Message Format
+Install project dependencies:
 
-Every commit message **MUST** follow the format:
+bash
+npm install
 
-`<type>(<scope>): <subject>`
 
-**Allowed Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `build`, `ci`.
+### 3. Run the Application
 
-**Example:** `feat(summarization): add exponential backoff to video processing API call`
+Start the development server:
 
-## 3. Code Quality & Style Enforcement
+bash
+npx expo start
 
-**Manual Formatting is Forbidden.** The code style is immutable and enforced automatically by CI.
 
-### Linters and Formatters
+This will launch the Expo Go app on your device or simulator, allowing you to see your changes in real-time.
 
-We use **Biome** as the single source of truth for linting and formatting.
+## Contribution Workflow
 
-1.  **Local Check:** Before committing, always run `npx @biomejs/biome check --apply .` to format and fix autofixable issues.
-2.  **CI Gate:** The `.github/workflows/ci.yml` workflow will immediately fail if non-compliant code is detected.
+1.  **Create a Branch:** Always branch off the `main` branch for your contributions:
+    bash
+git checkout -b feature/your-feature-name
 
-### Architectural Adherence
+    or for bug fixes:
+    bash
+git checkout -b bugfix/your-bug-fix-name
 
-New code must reflect the established principles:
-*   **SOLID:** Adherence to Single Responsibility Principle is paramount.
-*   **DRY:** Avoid duplication; leverage reusable utility hooks or modules.
-*   **Guard Clauses:** Prefer early returns over deep nesting (Verticality over Horizontality).
 
-## 4. Testing Mandate
+2.  **Make Your Changes:** Implement your feature or fix. Ensure your code adheres to the project's coding standards.
 
-**No logic without tests.** Contributions introducing new features or fixing bugs must include corresponding tests.
+3.  **Test Your Changes:** Write and run tests to ensure your changes haven't introduced regressions. We use **Vitest** for unit tests and **Playwright** for E2E tests.
+    bash
+npm run test
 
-1.  **Unit Testing (Vitest):** All business logic, utility functions, and custom hooks must have corresponding unit tests achieving **at least 90% coverage** for the modified/added files.
-2.  **Integration/E2E (Playwright/Expo Simulators):** Critical user flows (e.g., Video Upload -> Summary Generation -> Display) must be verified via E2E simulation or dedicated integration tests.
-3.  **Isolation:** All tests must run in isolation. Mock all external services (API calls, local storage) using standard patterns.
 
-## 5. The Pull Request (PR) Submission Protocol
+4.  **Lint Your Code:** Ensure your code is formatted correctly and adheres to linting rules. We use **Biome** for linting and formatting.
+    bash
+npm run lint
 
-Submitting a PR signals that you have passed the final local verification steps.
 
-1.  **Target Branch:** Always target `main`.
-2.  **PR Template:** Use the provided `.github/PULL_REQUEST_TEMPLATE.md` and fill out all sections thoroughly.
-3.  **CI Status:** Your PR **MUST** pass all checks in the Continuous Integration workflow (Lint, Test, Build) before review can begin.
-4.  **Reviewers:** A single Approving Reviewer is required for merging.
-5.  **Self-Correction Loop:** If a reviewer points out style or testing gaps, **you are responsible** for correcting and pushing updates until the PR is merged.
+5.  **Commit Your Changes:** Commit your changes with clear and concise messages. Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification.
+    bash
+git commit -m "feat: add new summarization algorithm"
 
---- 
 
-*Thank you for investing your time in the VideoSum project. Your dedication to precision elevates our entire platform.*
+6.  **Push Your Branch:** Push your branch to your fork.
+    bash
+git push origin feature/your-feature-name
+
+
+7.  **Open a Pull Request:** Create a Pull Request from your branch to the `main` branch of the `chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform` repository.
+    *   Provide a clear title and description for your PR.
+    *   Reference any relevant issues.
+    *   Ensure all checks in the CI pipeline pass.
+
+## Coding Standards & Best Practices
+
+*   **TypeScript (Strict Mode):** Write clean, type-safe TypeScript. Enable strict mode (`strict: true` in `tsconfig.json`).
+*   **Vite:** Utilize Vite for efficient bundling and development server.
+*   **TailwindCSS v4:** Use TailwindCSS for styling. Adhere to its utility-first principles.
+*   **Tauri v2:** If applicable for desktop builds, ensure adherence to Tauri guidelines.
+*   **Biome:** Use Biome for linting and formatting. Ensure your code passes Biome checks (`npm run lint`).
+*   **Vitest:** Write comprehensive unit tests for your components and logic.
+*   **Playwright:** Implement end-to-end tests for critical user flows.
+*   **Feature-Sliced Design (FSD):** While primarily a frontend architecture pattern, aim for modularity and clear separation of concerns in your code structure.
+*   **SOLID Principles:** Apply SOLID principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) where applicable.
+*   **DRY (Don't Repeat Yourself):** Avoid redundant code.
+*   **YAGNI (You Ain't Gonna Need It):** Only implement what is currently required.
+
+## AI Agent Directives
+
+This project is designed to be understood and maintained by AI agents. For detailed directives on the tech stack, architectural patterns, and verification commands, please refer to the **AGENTS.md** file.
+
+## Reporting Issues
+
+If you encounter a bug or have a feature request, please check if a similar issue already exists. If not, open a new issue with a detailed description, steps to reproduce, and relevant environment information.
+
+## Code of Conduct
+
+We are committed to fostering an inclusive and welcoming environment. Please adhere to our [Code of Conduct](https://github.com/chirag127/VideoSum-AI-Powered-Video-Summarization-Mobile-Platform/blob/main/CODE_OF_CONDUCT.md) (if applicable, otherwise omit or generate one).
+
+## License
+
+By contributing to this project, you agree that your contributions will be licensed under the **CC BY-NC** license.
+
+Thank you again for your interest in contributing!
